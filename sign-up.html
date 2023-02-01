@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <script>
+        function validateForm() {
+            let username1 = document.forms["sign_up"]["username1"].value;
+            let username2 = document.forms["sign_up"]["username2"].value;
+            let email = document.forms["sign_up"]["email"].value;
+            let password1 = document.forms["sign_up"]["password1"].value;
+            let password2 = document.forms["sign_up"]["password2"].value;
+
+            if (username1 == "") {
+                alert("First Name must be filled out");
+                return false;
+            }
+
+            if (username2 == "") {
+                alert("Last Name must be filled out");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (password1 == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+
+            if (password2 == "") {
+                alert("Confirm password must be filled out");
+                return false;
+            }
+
+            if (password1.length < 8) {
+                alert("Password must be at least 8 characters");
+                return false;
+            }
+
+
+            if (password1 != password2) {
+                alert("Password was not correct. Please try again.")
+                return false;
+            }
+        }
+    </script>
+
+    <title>Sign up | Sign in</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="col-left">
+            <div class="info-left">
+                <div class="text-display">
+                    - Welcome to Our Luxury Beautiful Bag - </div>
+                <div class="btn-left">
+                    <div class="example"><a href="#">Our Products</a></div>
+                    <div class="more"><a href="#">Read More</a></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-right">
+            <div class="logo">Yves Saint Laurent</div>
+            <div class="text-welcome">Bonjour!</div>
+            <div class="text-detail">Welcome to Our Sign Up Page</div>
+            <div class="form">
+                <form name="sign_up" action="#" onsubmit="return validateForm()" method="POST">
+                    <input type="username" name="username1" id="username1" placeholder="First Name" class="username1">
+                    <input type="username" name="username2" id="username2" placeholder="Last Name" class="username2">
+                    <input type="email" name="email" id="email" placeholder="Email" class="email">
+                    <input type="password" name="password1" id="password1" placeholder="Password" class="password1">
+                    <input type="password" name="password2" id="password2" placeholder="Confirm Password" class="password2">
+                    <div class="text-sign-in"> Already had an account?
+                        <a href="sign_in.html ">Log In here</a> </div>
+                    <input type="submit" value="Sign Up" class="button">
+                    <div class="hr ">- Or -</div>
+                    <div class="btn "><a href="# "><i class='bx bxl-facebook-square'></i> Continue with Facebook</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+</html>
